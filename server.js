@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -22,18 +21,9 @@ app.use(express.static(__dirname + '/dist/nasa-api-ng'));
 
 app.get('/*', function(req,res) {
     
-  res.sendFile(path.join(__dirname + '/dist/nasa-api-ng/index.html'))
+  res.sendFile(path.resolve(__dirname+'/dist/nasa-api-ng/index.html'));
   });
 
-/*
-mongoose.connect(`mongodb://localhost:27017/nasaapi`)
-.then(() => {
-  console.log('Connected to database');
-  app.listen(port, () => {
-    console.log(`Express server listening on port ${port}`);
-  });
-});
-*/
 app.listen(port, () => {
-    console.log(`Express server listening on port ${port}`);
-  });
+  console.log(`Express server listening on port ${port}`);
+});
