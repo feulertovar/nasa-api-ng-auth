@@ -7,7 +7,7 @@ const bearerToken = require('express-bearer-token');
 const oktaAuth = require('./auth');
 const nasaapi = require('./nasaapi');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 const app = express()
   .use(cors())
