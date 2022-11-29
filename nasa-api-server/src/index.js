@@ -17,11 +17,11 @@ const app = express()
   .use(nasaapi());
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '../dist/nasa-api-ng'));
+app.use(express.static(__dirname + '../../dist/nasa-api-ng'));
 
 app.get('/*', function(req,res) {
     
-  res.sendFile(path.join(__dirname+'../dist/nasa-api-ng/index.html'));
+  res.sendFile(path.join(__dirname+'../../dist/nasa-api-ng/index.html'));
   });
 
 mongoose.connect(`mongodb://localhost:27017/nasaapi`)
