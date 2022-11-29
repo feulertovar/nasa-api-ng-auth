@@ -21,9 +21,7 @@ const routes: Routes = [
 
 { path: 'exodata', component : ExodataComponent, runGuardsAndResolvers: 'always'},
 {
-  path: 'profile',
-  component: ProfileComponent
-},
+  path: 'profile', component: ProfileComponent, runGuardsAndResolvers: 'always'},
 {
   path: 'implicit/callback',
   component: OktaCallbackComponent
