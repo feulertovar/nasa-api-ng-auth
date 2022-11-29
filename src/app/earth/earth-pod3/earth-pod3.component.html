@@ -1,0 +1,38 @@
+<hr class="featurette-divider">
+
+<div class="row featurette divpad">
+    <div class="col-md-3">
+        <h2 class="featurette-heading">Landsat satellite imagery <span class="text-muted"></span></h2>
+        <p class="lead">powered by Google Earth Engine API,</p>
+    </div>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-3">
+                <div class="form-outline">
+                    <input name="daterange3" type="text" id="geoDay" class="form-control" value="01-01-2020" />
+                    <label class="form-label" for="geoDay">Date Range</label>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-outline">
+                    <input name="longitude" type="text" id="longitude" class="form-control" value="100.75" />
+                    <label class="form-label" for="longitude">Longitude</label>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-outline">
+                    <input name="latitude" type="text" id="latitude" class="form-control" value="1.5" />
+                    <label class="form-label" for="latitude">Latitude</label>
+                </div>
+            </div>
+            <div class="col-3"><button (click)="GeoPic()" id="btngeo" type="button" class="btn
+                  btn-primary">Get GeoPic</button></div>
+        </div>
+
+        <div id="geopicdiv" class="col-md-5">
+
+        </div>
+    </div>
+</div>
+
+<hr class="featurette-divider">

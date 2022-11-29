@@ -1,0 +1,46 @@
+<hr class="featurette-divider">
+
+<div class="row featurette divpad">
+  <div class="col-md-5">
+    <h2 class="featurette-heading">Mars Rover Images</h2>
+    <h4><span class="text-muted">Curious about CURIOSITY</span></h4>
+    <p class="lead">Photos by Curiosity rover based on Sol ( 24h39m35s )</p>
+  </div>
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-2">
+        <div class="form-outline">
+          <input name="sol" type="text" id="sol" class="form-control" value="10" />
+          <label class="form-label" for="sol">Sol</label>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="form-outline">
+          <input name="soldate" type="text" id="sol1date" class="form-control" value="" />
+          <label class="form-label" for="sol1date">Date / Status</label>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button (click)="Rover1()" id="btnminus1" type="button" class="quantity-left-minus btn
+                btn-danger btn-number" data-type="minus" data-field="">
+              <label class="form-label" for="btnminus1">-</label>
+              <span class="glyphicon glyphicon-minus"></span>
+            </button>
+          </span>
+          <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1"
+            max="100" />
+          <span class="input-group-btn">
+            <button (click)="Rover1()" id="btnplus1" type="button" class="quantity-right-plus btn
+                btn-success btn-number" data-type="plus" data-field="">
+              <label class="form-label" for="btnminus1">+</label>
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id=sol1picdiv class="col-md-5 rover" style="width: 500px; height: 500px;">
+</div>

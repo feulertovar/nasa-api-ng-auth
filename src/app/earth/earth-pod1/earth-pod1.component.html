@@ -1,0 +1,28 @@
+    <hr class="featurette-divider">
+
+    <div class="row featurette divpad">
+      <div class="col-md-3">
+        <h2 class="featurette-heading">EONET</h2>
+        <h4><span class="text-muted">Earth Observatory Natural Event Tracker</span></h4>
+        <p class="lead">look for natural events as they occur.</p>
+      </div>
+      <div id=eonetdiv class="col-md-8">
+        <div class="row">
+          <div class="col-3">
+            <div class="form-outline">
+              <input name="date" type="text" id="numDays" class="form-control" value="5" />
+              <label class="form-label" for="numDays">Limit</label>
+            </div>
+          </div>
+          <div class="col-2"><button (click)="EONET()" id="btneonet" type="button" class="btn
+                btn-primary">Get Events</button></div>
+          <div class="col-2">Title</div>
+          <div class="col-4">URL</div>
+
+          <div id="eonetinfodiv" class="col-md-11"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">

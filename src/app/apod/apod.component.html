@@ -1,0 +1,131 @@
+
+  <main>
+
+    <!-- Marketing messaging and featurettes
+ ================================================== -->
+   <!-- Wrap the rest of the page in another container to center all the content. -->
+   <div class="container marketing">
+
+
+     <!-- START THE FEATURETTES -->
+
+     <hr class="featurette-divider">
+
+     <div class="row featurette">
+       <div class="col-md-7">
+         <h2 class="featurette-heading">NASA Astronomy picture of
+           the day. <span class="text-muted">It’ll blow your
+             mind.</span></h2>
+         <p class="lead">A new spectacular image every single
+           day.</p>
+       </div>
+       <div id=apod class="col-md-4">
+
+         <script type="module">
+           import { NasaPhoto } from "./modules/apod.js";
+           window.addEventListener("DOMContentLoaded", event => {
+             NasaPhoto();
+
+             //when any button is clicked or moused over
+             $('#apod').on('click', event => {
+               alert("Apod Images, New one everyday!");
+             });
+
+           });
+
+         </script>
+       </div>
+     </div>
+
+     <hr class="featurette-divider">
+
+     <div class="row featurette">
+       <div class="col-md-5 order-md-2">
+         <h2 class="featurette-heading">Random APOD Image<span class="text-muted"></span></h2>
+         <p class="lead">APOD of another day in the cosmos</p>
+       </div>
+       <div id="apod2" class="col-md-7 order-md-1">
+
+         <script type="module">
+           import { Apod2 } from "../../../assets/modules/apod2.js";
+           window.addEventListener("DOMContentLoaded", event => {
+             Apod2();
+
+             //when any button is clicked or moused over
+             $('#apod2').on('mouseover', event => {
+               alert("Random pic, refresh page for a new one!");
+             });
+
+           });
+         </script>
+       </div>
+     </div>
+
+     <hr class="featurette-divider">
+
+     <div class="row featurette">
+       <div class="col-md-7">
+         <h2 class="featurette-heading">Another APOD Pic
+           <span class="text-muted"></span>
+         </h2>
+         <p class="lead">powered by Google Earth Engine API,</p>
+       </div>
+       <div id="apod3" class="col-md-5">
+
+         <script type="module">
+           import { Apod3 } from "./modules/apod3.js";
+           window.addEventListener("DOMContentLoaded", event => {
+             Apod3();
+
+             //when any button is clicked or moused over
+             $('#apod3').on('click', event => {
+               alert("Another random pic, refresh page for a new one!");
+             });
+
+           });
+             //ES6 Class Definition
+             class Astronomy {
+               // constructor() { }
+               constructor(planet, moon, star) {
+                 this.planet = planet;
+                 this.moon = moon;
+                 this.star = star;
+               }
+               // Simple class instance methods using short-hand method
+               // declaration
+               sayPlanet() {
+                 console.log(this.planet);
+               }
+
+               sayMoon() {
+                 console.log(this.moon);
+               }
+
+               sayStar(){
+                 console.log(this.star);
+               }
+
+         }
+             //instantiate instance
+             let a = new Astronomy("Jupiter", "Titan", "Sun");
+             a.sayPlanet();
+             a.sayMoon();
+             a.sayStar();
+
+         </script>
+       </div>
+     </div>
+
+     <hr class="featurette-divider">
+
+     <!-- /END THE FEATURETTES -->
+
+   </div><!-- /.container -->
+
+
+   <!-- FOOTER -->
+   <footer class="container">
+     <p class="float-end"><a href="#">Back to top</a></p>
+     <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+   </footer>
+ </main>

@@ -1,0 +1,29 @@
+<div class="row featurette divpad">
+    <div class="col-md-3">
+        <h2 class="featurette-heading">Geomagnetic Storms</h2>
+        <h4><span class="text-muted">Its rough out there</span></h4>
+        <p class="lead">a RESTful web service for geomagnetic storm information</p>
+    </div>
+    <div id=geowsdiv class="col-md-9">
+        <div class="row">
+            <div class="col-3">
+                <div class="form-outline">
+                    <input name="daterange5" type="text" id="stormDays" class="form-control"
+                        value="01/01/2018 - 01/15/2021" />
+                    <label class="form-label" for="stormDays">Date Range</label>
+                </div>
+            </div>
+
+            <div class="col-2"><button (click)="GEOWS()" id="btngeows" type="button"
+                    class="btn btn-primary">Geos</button></div>
+            <div class="col-2">Location</div>
+            <div class="col-3 .smalldivpad">Url</div>
+        </div>
+
+        <div id=geowsinfodiv class="col-md-12 ">
+        </div>
+
+    </div>
+</div>
+
+<hr class="featurette-divider">

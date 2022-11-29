@@ -1,0 +1,26 @@
+<div class="row featurette divpad">
+    <div class="col-md-3">
+        <h2 class="featurette-heading">Corona Mass Ejections</h2>
+        <h4><span class="text-muted">Coronal Mass Ejection (CME) Analysis</span></h4>
+        <p class="lead">a RESTful web service for near earth Asteroid information</p>
+    </div>
+    <div id=coronaldiv class="col-md-9">
+        <div class="row">
+            <div class="col-3">
+                <div class="form-outline">
+                    <input name="daterange6" type="text" id="coroDays" class="form-control"
+                        value="01/01/2018 - 01/15/2021" />
+                    <label class="form-label" for="coroDays">Date Range</label>
+                </div>
+            </div>
+            <div class="col-2"><button (click)="CORONAL()" id="btncoronal" type="button"
+                    class="btn btn-primary">Coronas</button></div>
+
+            <div class="col-2">startTime</div>
+            <div class="col-3">Url</div>
+        </div>
+        <div id=coronalinfodiv class="col-md-12">
+        </div>
+    </div>
+</div>
+<hr class="featurette-divider">
