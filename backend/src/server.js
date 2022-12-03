@@ -7,9 +7,11 @@ const bearerToken = require('express-bearer-token');
 const oktaAuth = require('./auth');
 const nasaapi = require('./nasaapi');
 
+const uri = process.env.MONGODB_URI;
+
 // Connecting with mongo db
 mongoose
-  .connect('mongodb://127.0.0.1:27017/nasaapi')
+  .connect(`"${uri}/nasaapi"`)
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
