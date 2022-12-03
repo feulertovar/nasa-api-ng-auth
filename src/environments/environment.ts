@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  nasaapiServer: 'http://localhost:4000'
+  nasaapiServer: 'http://localhost:8080'
 };
 
 /*
