@@ -11,7 +11,7 @@ const uri = process.env.MONGODB_URI;
 
 // Connecting with mongo db
 mongoose
-  .connect(`"${uri}"`)
+  .connect(uri)
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
