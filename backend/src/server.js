@@ -11,7 +11,7 @@ const uri = process.env.MONGODB_URI;
 
 // Connecting with mongo db
 mongoose
-  .connect(uri)
+  .connect('mongodb+srv://feuler:TytuHposkYpc5MG7@cluster0.ebkhbv8.mongodb.net/nasaapi?retryWrites=true&w=majority')
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
