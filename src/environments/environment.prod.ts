@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  nasaapiServer: 'http://localhost:4200'
+  nasaapiServer: 'https://nasa-api-viewer.herokuapp.com'
 };
