@@ -12,7 +12,25 @@ declare var $: any;
 })
 export class AppComponent {
   title = 'nasa-api-ng';
-  //  isAuthenticated: boolean = false;
+  isAuthenticated: boolean = false;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+  constructor(public oktaAuth: OktaAuthService, private router: Router,
+    private activatedRoute: ActivatedRoute) {
+    this.oktaAuth.$authenticationState.subscribe(
+      (isAuthenticated: boolean) => this.isAuthenticated = isAuthenticated
+    );
+    
+  }
+
+  ngOnInit() {
+    this.oktaAuth.isAuthenticated().then((auth) => {this.isAuthenticated = auth});
+  }
+
+  login() {
+    this.oktaAuth.loginRedirect();
+  }
+
+  logout() {
+    this.oktaAuth.logout('/');
+  }
 }
