@@ -22,7 +22,13 @@ export class NasaapingService {
         }
       });
       return new Promise<any>((resolve, reject) => {
-        result.subscribe(resolve, reject);
+        result.subscribe(
+          {
+            next: (resolve),
+            error: (reject: any) => { },
+            complete: () => { }
+          }
+        );
       });
     }
 
