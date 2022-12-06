@@ -55,7 +55,7 @@ import { ApodComponent } from './apod/apod.component';
     ReactiveFormsModule,
     OktaAuthModule.initAuth({
       issuer: 'https://dev-99298336.okta.com/oauth2/default',
-      redirectUri: 'https://nasa-api-viewer.herokuapp.com/implicit/callback',
+      redirectUri: 'http://localhost:4200/implicit/callback',
       clientId: '0oa7bspd2ik44oz2P5d7'
     })
   ],
