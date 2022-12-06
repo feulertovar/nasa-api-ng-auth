@@ -35,11 +35,11 @@ app.use(oktaAuth)
 app.use(nasaapi());
 
 // Serve only the static files form the dist directory
-app.use(express.static('../../dist/nasa-api-ng'));
-app.get('/*', function(req,res) {
-    
-  res.sendFile(path.resolve('../../dist/nasa-api-ng/index.html'));
-  });
+app.use(express.static(__dirname + '/dist/nasa-api-ng'));
+app.get('/*', function(req,res) { 
+res.sendFile(path.join(__dirname+'/dist/nasa-api-ng/index.html'));
+});
+
 //app.use('/api', employeeRoute)  
 // Create port
 const port = process.env.PORT || 8080
